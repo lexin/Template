@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CourseTableViewCell" rowHeight="95" id="5A8-3F-CgN" customClass="CourseTableViewCell" customModule="Template" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="95"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5A8-3F-CgN" id="QKc-5V-I0i">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="95"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="au7-XU-E9i">
+                        <rect key="frame" x="13" y="12" width="308" height="76"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vsn-aL-cQJ">
+                        <rect key="frame" x="328" y="6" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="VjX-wZ-g6q"/>
+                            <constraint firstAttribute="height" constant="80" id="rC4-i7-ukR"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="au7-XU-E9i" firstAttribute="top" secondItem="QKc-5V-I0i" secondAttribute="top" constant="12" id="F7c-ka-Nr3"/>
+                    <constraint firstAttribute="trailing" secondItem="Vsn-aL-cQJ" secondAttribute="trailing" constant="6" id="K8N-XZ-rF2"/>
+                    <constraint firstAttribute="bottom" secondItem="au7-XU-E9i" secondAttribute="bottom" constant="7" id="NM6-NO-ZSa"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Vsn-aL-cQJ" secondAttribute="bottom" constant="6" id="Vpn-E2-mfO"/>
+                    <constraint firstItem="Vsn-aL-cQJ" firstAttribute="leading" secondItem="au7-XU-E9i" secondAttribute="trailing" constant="7" id="kEz-wR-FA8"/>
+                    <constraint firstItem="au7-XU-E9i" firstAttribute="leading" secondItem="QKc-5V-I0i" secondAttribute="leading" constant="13" id="njA-8K-YEQ"/>
+                    <constraint firstItem="Vsn-aL-cQJ" firstAttribute="top" secondItem="QKc-5V-I0i" secondAttribute="top" constant="6" id="yms-60-cTR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="courseImageView" destination="Vsn-aL-cQJ" id="YZe-x0-RZu"/>
+                <outlet property="courseTitleLabel" destination="au7-XU-E9i" id="AES-iw-JF9"/>
+            </connections>
+            <point key="canvasLocation" x="63.768115942028992" y="16.40625"/>
+        </tableViewCell>
+    </objects>
+</document>
