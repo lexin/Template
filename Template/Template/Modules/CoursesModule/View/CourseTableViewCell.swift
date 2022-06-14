@@ -10,7 +10,7 @@ import UIKit
 import SDWebImage
 
 class CourseTableViewCell: UITableViewCell {
-  struct ViewModel {
+  struct PresentingModel {
     let title: String
     let imageUrl: URL?
   }
@@ -18,16 +18,15 @@ class CourseTableViewCell: UITableViewCell {
   @IBOutlet var courseTitleLabel: UILabel!
   @IBOutlet var courseImageView: UIImageView!
 
-
   override func prepareForReuse() {
     super.prepareForReuse()
     courseTitleLabel.text = ""
     courseImageView.image = nil
   }
 
-  func setData(viewModel: ViewModel) {
-    courseTitleLabel.text = viewModel.title
-    courseImageView.sd_setImage(with: viewModel.imageUrl)
+  func setData(model: PresentingModel) {
+    courseTitleLabel.text = model.title
+    courseImageView.sd_setImage(with: model.imageUrl)
   }
 
 

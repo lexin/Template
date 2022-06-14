@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kHt-qn-Vps">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -8,10 +8,26 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="zs4-Dl-xvD">
+            <objects>
+                <navigationController id="kHt-qn-Vps" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8MX-2C-f4n">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="tSf-fI-g5B"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Hy-Fm-H3k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-617" y="115"/>
+        </scene>
+        <!--Courses-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Template" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Courses" id="BYZ-38-t0r" customClass="CoursesViewController" customModule="Template" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,6 +55,7 @@
                             <constraint firstItem="36b-NK-bEX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qf2-Hz-zCb"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="94J-5d-VTM"/>
                     <connections>
                         <outlet property="activityIndicator" destination="ajg-p7-JPF" id="yRX-in-NPH"/>
                         <outlet property="table" destination="36b-NK-bEX" id="VHa-iG-iPM"/>
@@ -47,6 +64,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
+        </scene>
+        <!--Course DetailsVC-->
+        <scene sceneID="f9V-kQ-iJE">
+            <objects>
+                <viewController storyboardIdentifier="CourseDetailsVC" id="dam-Sm-WJO" customClass="CourseDetailsVC" customModule="Template" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dw3-AV-Gm5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRw-UN-jVh">
+                                <rect key="frame" x="20" y="69" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1fb-P6-5ZU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mRw-UN-jVh" firstAttribute="top" secondItem="1fb-P6-5ZU" secondAttribute="top" constant="25" id="4AH-yr-eEw"/>
+                            <constraint firstItem="mRw-UN-jVh" firstAttribute="leading" secondItem="1fb-P6-5ZU" secondAttribute="leading" constant="20" id="6jy-Ao-gPQ"/>
+                            <constraint firstItem="1fb-P6-5ZU" firstAttribute="trailing" secondItem="mRw-UN-jVh" secondAttribute="trailing" constant="20" id="WVC-a5-IZV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="mRw-UN-jVh" id="KiR-5C-mDF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q0C-kp-7R0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="887" y="115"/>
         </scene>
     </scenes>
     <resources>
